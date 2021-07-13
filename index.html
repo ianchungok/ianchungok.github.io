@@ -50,6 +50,11 @@
 				}
 			});
 		});
+		$(function() {
+			$('#reset').click(function(){
+				$("#bodyfat").val('');
+			});
+		});
 		function formatFloat(num, pos) {
 			var size = Math.pow(10, pos);
 			return Math.round(num * size) / size;
@@ -111,8 +116,11 @@
   				<div class="card card-body">女生要填0，男生要填1</div>
 			</div>
 		</div>
-		<div class="col-md-2 box-button">
+		<div class="col-md-1 box-button">
 			<button type="button" id="calc" class="btn btn-success">計算你的體脂肪</button>
+		</div>
+		<div class="col-md-1 box-button">
+			<button type="button" id="reset" class="btn btn-success">重置</button>
 		</div>
 		<div class="col-md-2 box">
 			<label for="bodyfat">您的體脂肪</label>
