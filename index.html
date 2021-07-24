@@ -42,17 +42,16 @@
 					alert("性別輸入錯誤喔，可以按下面按鈕來看要填什麼");
 				}else{
 				var bodyfat = (1.2 * BMI) + (0.23 * a)- 5.4 - (10.8 * s);
-				$("#bodyfat").val(formatFloat(bodyfat,3) + "%");
-				$("#height").val('');
-				$("#weight").val('');
-				$("#age").val('');
-				$("#sex").val('');
 				}
 			});
 		});
 		$(function() {
 			$('#reset').click(function(){
 				$("#bodyfat").val('');
+				$("#height").val('');
+				$("#weight").val('');
+				$("#age").val('');
+				$("#sex").val('');
 			});
 		});
 		function formatFloat(num, pos) {
