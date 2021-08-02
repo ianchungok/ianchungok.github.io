@@ -11,6 +11,11 @@
 	<script>
 		$(function() {
 			$('#calc').click(function(){
+				$("#table_row1").css({"background-color":"#ffffff"});
+				$("#table_row2").css({"background-color":"#ffffff"});
+				$("#table_row3").css({"background-color":"#ffffff"});
+				$("#table_row4").css({"background-color":"#ffffff"});
+				$("#table_row5").css({"background-color":"#ffffff"});
 				var h = $("#height").val();
 				var w = $("#weight").val();
 				var BMI = w / (h * h)
@@ -29,8 +34,35 @@
 				}else if (s != 0 && s != 1) {
 					alert("性別輸入錯誤喔，可以按下面按鈕來看要填什麼");
 				}else{
-				var bodyfat = (1.2 * BMI) + (0.23 * a)- 5.4 - (10.8 * s);
-				$("#bodyfat").val(formatFloat(bodyfat,3) + "%");
+					var bodyfat = (1.2 * BMI) + (0.23 * a)- 5.4 - (10.8 * s);
+					$("#bodyfat").val(formatFloat(bodyfat,3) + "%");
+					if (s == 0 && bodyfat >= 10 && bodyfat <= 12) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else if (s == 1 && bodyfat >= 2 && bodyfat <= 5) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else if (s == 0 && bodyfat >= 14 && bodyfat <= 20) {
+						$("#table_row2").css({"background-color":"#99FFDF"});
+					}else if (s == 1 && bodyfat >= 6 && bodyfat <= 13) {
+						$("#table_row2").css({"background-color":"#99FFDF"});
+					}else if (s == 0 && bodyfat >= 21 && bodyfat <= 24) {
+						$("#table_row3").css({"background-color":"#99FFDF"});
+					}else if (s == 1 && bodyfat >= 14 && bodyfat <= 17) {
+						$("#table_row3").css({"background-color":"#99FFDF"});
+					}else if (s == 0 && bodyfat >= 31 && bodyfat <= 50) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else if (s == 1 && bodyfat >= 18 && bodyfat <= 24) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else if (s == 0 && bodyfat >= 32) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else if (s == 1 && bodyfat >= 25) {
+						$("#table_row1").css({"background-color":"#99FFDF"});
+					}else{
+						$("#table_row1").css({"background-color":"#ffffff"});
+						$("#table_row2").css({"background-color":"#ffffff"});
+						$("#table_row3").css({"background-color":"#ffffff"});
+						$("#table_row4").css({"background-color":"#ffffff"});
+						$("#table_row5").css({"background-color":"#ffffff"});
+					}
 				}
 			});
 		});
@@ -60,10 +92,6 @@
 	</style>
 </head>
 <body>
-
-
-
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">體脂肪計算機</a>
@@ -124,27 +152,27 @@
     	</tr>
   	</thead>
   	<tbody>
-    	<tr>
+    	<tr id="table_row1">
     	  <td>精瘦</td>
     	  <td>10-12%</td>
     	  <td>2-5%</td>
     	</tr>
-    	<tr>
+    	<tr id="table_row2">
       	<td>運動員</td>
       	<td>14-20%</td>
     	  <td>6-13%</td>
     	</tr>
-    	<tr>
+    	<tr id="table_row3">
     		<td>結實</td>
       	<td>21-24%</td>
       	<td>14-17%</td>
     	</tr>
-    	<tr>
+    	<tr id="table_row4">
     		<td>可接受</td>
       	<td>31-50%</td>
       	<td>18-24%</td>
     	</tr>
-    	<tr>
+    	<tr id="table_row5">
     		<td>肥胖</td>
       	<td>32% +</td>
       	<td>25% +</td>
