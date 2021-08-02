@@ -36,21 +36,21 @@
 				}else{
 					var bodyfat = (1.2 * BMI) + (0.23 * a)- 5.4 - (10.8 * s);
 					$("#bodyfat").val(formatFloat(bodyfat,3) + "%");
-					if (s == 0 && bodyfat >= 10 && bodyfat <= 12) {
+					if (s == 0 && bodyfat >= 10 && bodyfat < 13) {
 						$("#table_row1").css({"background-color":"#99FFDF"});
-					}else if (s == 1 && bodyfat >= 2 && bodyfat <= 5) {
+					}else if (s == 1 && bodyfat >= 2 && bodyfat < 6) {
 						$("#table_row1").css({"background-color":"#99FFDF"});
-					}else if (s == 0 && bodyfat >= 14 && bodyfat <= 20) {
+					}else if (s == 0 && bodyfat >= 14 && bodyfat < 21) {
 						$("#table_row2").css({"background-color":"#99FFDF"});
-					}else if (s == 1 && bodyfat >= 6 && bodyfat <= 13) {
+					}else if (s == 1 && bodyfat >= 6 && bodyfat < 14) {
 						$("#table_row2").css({"background-color":"#99FFDF"});
-					}else if (s == 0 && bodyfat >= 21 && bodyfat <= 24) {
+					}else if (s == 0 && bodyfat >= 21 && bodyfat < 25) {
 						$("#table_row3").css({"background-color":"#99FFDF"});
-					}else if (s == 1 && bodyfat >= 14 && bodyfat <= 17) {
+					}else if (s == 1 && bodyfat >= 14 && bodyfat < 18) {
 						$("#table_row3").css({"background-color":"#99FFDF"});
-					}else if (s == 0 && bodyfat >= 31 && bodyfat <= 50) {
+					}else if (s == 0 && bodyfat >= 31 && bodyfat < 51) {
 						$("#table_row1").css({"background-color":"#99FFDF"});
-					}else if (s == 1 && bodyfat >= 18 && bodyfat <= 24) {
+					}else if (s == 1 && bodyfat >= 18 && bodyfat < 25) {
 						$("#table_row1").css({"background-color":"#99FFDF"});
 					}else if (s == 0 && bodyfat >= 32) {
 						$("#table_row1").css({"background-color":"#99FFDF"});
