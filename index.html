@@ -20,7 +20,7 @@
 				var w = $("#weight").val();
 				var BMI = w / (h * h)
 				var a = $("#age").val();
-				var s = $("#sex").val();
+				var s = $("#gender").val();
 				if (h == '') {
 					alert("要輸入身高喔");
 				}else if(w == ''){
@@ -72,7 +72,7 @@
 				$("#height").val('');
 				$("#weight").val('');
 				$("#age").val('');
-				$("#sex").val('');
+				$("#gender").val('');
 			});
 		});
 		function formatFloat(num, pos) {
@@ -122,8 +122,8 @@
 			<br>
 			<input id = "age" class="form-control" type="number" placeholder="請輸入年紀^^" >
 			<br>
-			<label for="sex">性別(性))</label>
-			<select type="number" class="form-control" id="sex">
+			<label for="gender">性別</label>
+			<select type="number" class="form-control" id="gender">
 				<option selected="selected">性別</option>
         <option value="1" id="male">男</option>
         <option value="0" id="female">女</option>
